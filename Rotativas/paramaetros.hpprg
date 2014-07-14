@@ -1,0 +1,64 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Autor:
+@ E-mail:
+@ VersiÛn:
+@ Creado con HPUserEdit 6
+
+´
+
+"PRUEBA DE ROTOR FRENADO
+Datos (en total)
+Pc,Icc,Vcc
+---
+Por Fase 
+Icc = Icc
+Vcc = Vcc/É3
+Pcc = Pcc/3
+"
+SCROLL
+
+  
+"ROTOR FRENADO"
+{
+"PCC"
+"ICC"
+"VCC"
+}
+1
+{ }
+{ }
+INFORM
+IF
+THEN
+OBJç  DROP
+
+
+  ç PCC ICC VCC
+  ´
+   "---POR FASE---"
+   PCC 3 / 'PCC' STO
+   PCC "PCC" çTAG 
+   VCC 3 É / 'VCC' STO   
+   VCC "VCC" çTAG 
+   PCC ICC 2 ^ /
+   "REQ(r1+r2')" çTAG
+   VCC ICC * 2 ^ PCC 2 ^ - É ICC 2 ^ /
+   "XEQ(x1+x2')" çTAG   
+   
+   PCC ICC 2 ^ /
+   VCC ICC * 2 ^ PCC 2 ^ - É ICC 2 ^ / i *
+   + INV    
+   "IAr/(Vt/É3)"   çTAG
+
+   
+
+
+  ª
+
+ELSE
+END
+ 
+  
+
+ª

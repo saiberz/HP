@@ -1,0 +1,75 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Autor:
+@ E-mail:
+@ VersiÛn:
+@ Creado con HPUserEdit 6
+
+´
+
+"PRUEBA DE VACIO
+Datos (en total)
+Po,Io,Vo
+---
+Por Fase 
+Io = Io
+Vo = Vo/É3
+Po = Po/3
+"
+SCROLL
+
+  
+"PRUEBA DE VACIO"
+{
+"Po"
+"Io"
+"Vo"
+"Pfv + Pad"
+"r1"
+"x1"
+}
+2
+{ }
+{ NOVAL NOVAL NOVAL 0 NOVAL NOVAL }
+INFORM
+IF
+THEN
+OBJç  DROP
+
+  0 0 0
+  ç Po Io Vt Per r1 x1 Phf Vo theta
+  ´
+
+   "---POR FASE---"
+   Po 3 / 'Po' STO
+   Po "Po" çTAG 
+   Vt 3 É / 'Vt' STO   
+   Vo "Vo" çTAG 
+   Po Vt Io * /   
+   DEG ACOS
+   'theta' STO
+   'theta' "Theta: " çTAG
+   "Phf = Po - (Io^2)*(r1)-Pfv-Pad"
+   Po Io 2 ^ r1 * - Per -   
+   'Phf' STO
+   Phf "Ph+f" çTAG
+
+   RECT DEG   
+   Vt  
+   r1 i x1 * + 
+   theta NEG COS theta NEG SIN i * + Io *
+   * - 
+   CYLIN
+   'Vo' STO
+   Vo "Vo" çTAG  
+
+   Vo ABS 2 ^ Phf / "Rp" çTAG  
+   Vo ABS 2 ^ Io Vo ABS * 2 ^ Phf 2 ^ - É / 
+  ª
+
+ELSE
+END
+ 
+  
+
+ª

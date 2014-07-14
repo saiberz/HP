@@ -1,0 +1,78 @@
+%%HP: T(0)A(D)F(.);
+@ Argumentos:
+@ Autor:
+@ E-mail:
+@ VersiÛn:
+@ Creado con HPUserEdit 6
+
+´
+
+"Arranque S:1"
+{
+"Z1"
+"r2+x2"
+"Rp"
+"Xm"
+"s"
+}
+2
+{ }
+{}
+INFORM
+IF
+THEN
+OBJç 
+DROP
+    0 0 0 0 0 0
+  ç Z1 Z21 RP XM s
+    ZM r2 x2 R X Z2
+  ´   
+   Z21 RE s /
+   Z21 IM i * + 
+   'Z2' STO 
+   Z2 "Z2" çTAG
+   DEG
+   Z1 Z2    
+   XM i *   'XM' STO    
+   RP XM * RP XM + / çNUM
+   'ZM' STO 
+   ZM "Zm" çTAG
+   Z2 ZM + Z1 Z2 * ZM Z1 Z2 + * + /          
+   "I1/Vt" çTAG   
+   ZM Z1 Z2 * ZM Z1 Z2 + * + /
+   "I2/Vt" çTAG      
+   {} + +
+   
+   'Vt' 3 É / 
+   
+   "FDP"
+   Z2 ZM + Z1 Z2 * ZM Z1 Z2 + * + / IM         
+   Z2 ZM + Z1 Z2 * ZM Z1 Z2 + * + / RE / ATAN NEG 
+  
+   Z2 IM 'x2' STO 
+   Z21 RE 'r2' STO 
+   
+   3 r2 * s / 'I2' 2 ^ * 'ws' / 
+   
+   "R+jx = Z1 // Zm"
+   Z1 ZM * Z1 ZM + / 
+   DUP RE 'R' STO 
+   IM 'X' STO
+   R X i * + 
+   "R+jx: " çTAG
+
+   "st max:"
+   r2 R 2 ^ X x2 + 2 ^ + É /  
+      
+   "Z2: Tmax"   
+   r2 
+   r2 R 2 ^ X x2 + 2 ^ + É / /
+   x2 i * + 
+   
+  ª
+  
+ELSE
+END
+  
+
+ª
